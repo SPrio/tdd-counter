@@ -22,18 +22,18 @@ describe("Counter Testing", () => {
   });
 
   test("render the initial value of state in a div", () => {
-    expect(wrapper.find('#counter-value').text()).toBe("0")
+    expect(wrapper.find("#counter-value").text()).toBe("0");
   });
 
-  test('render the click event of increment button and increment counter value', () => {
+  test("render the click event of increment button and increment counter value", () => {
     wrapper.find("#increment-btn").simulate("click");
     expect(wrapper.find("#counter-value").text()).toBe("1");
-  })
+  });
 
-  test('render the click event of decrement button and decrement counter value', () => {
+  test("render the click event of decrement button and decrement counter value", () => {
     wrapper.find("#increment-btn").simulate("click");
     expect(wrapper.find("#counter-value").text()).toBe("1");
     wrapper.find("#decrement-btn").simulate("click");
     expect(wrapper.find("#counter-value").text()).toBe("0");
-  })
+  });
 });
