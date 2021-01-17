@@ -1,12 +1,13 @@
 // setup file
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import App from "./App";
 
 
 describe("Counter Testing", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = mount(<App />);
+    console.log(wrapper.debug());
   });
   test("render the title of counter", () => {
     expect(wrapper.find("h1").text()).toContain("This is counter app");
